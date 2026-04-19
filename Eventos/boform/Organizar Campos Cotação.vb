@@ -85,7 +85,9 @@ Dim bo=CType(mpage, mainform).propmainformdataset.tables(0).rows(0)
 
 Try
 
-If bo("ndos")=41 Then 
+Dim dossiers As Integer() = {41, 43}
+
+If Array.IndexOf(dossiers, CInt(bo("ndos"))) >= 0 Then 
 
     'ctl00_conteudo_tpdescFornecedor
     ocultarCampo("dataobra")
@@ -94,6 +96,19 @@ If bo("ndos")=41 Then
     ocultarCampo("TabContainerUs_1")
     ocultarCampo("TabContainerUs_3")
 
+
+End If
+
+if CInt(bo("ndos"))=43 Then 
+
+    'ctl00_conteudo_tpdescFornecedor
+    ocultarCampo("GridBIContainer")
+    ocultarCampo("etotaldeb")
+    ocultarCampo("ettiva")
+    ocultarCampo("etotalglobal")
+    ocultarCampo("etotalecovalor")
+    ocultarCampo("moeda")
+    
 
 End If
 

@@ -1,5 +1,4 @@
 
-
 Try
 
 
@@ -31,14 +30,25 @@ Try
     Dim param As New With {.requisicao = bo3("u_requis").ToString(), .incrementa = incrementa}
     Dim result = userScript.RunScript(mpage, "", param, "")
 
-    'XcUtil.LogViewSource(mpage, "Resultado da validação de cotações: " & Newtonsoft.Json.JsonConvert.SerializeObject(result))
+    XcUtil.LogViewSource(mpage, "Resultado da validação de cotações: " & Newtonsoft.Json.JsonConvert.SerializeObject(result))
     
+
+
     
     If result.cod = "0007" Then
         Xcutil.LogViewSource(mpage, "Erro interno ao validar cotações: " & result.message)
         XcUtil.alerta(mpage, "Erro interno ao validar cotações", 3, 15000)
         Return False
     End If
+
+
+    If result.cod <> "0000" Then
+       
+        XcUtil.alerta(mpage, result.codDesc, 3, 15000)
+        Return False
+    End If
+
+
     
     If result.data.excede Then
         XcUtil.alerta(mpage, result.message, 3, 15000)
