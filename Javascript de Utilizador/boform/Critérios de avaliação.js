@@ -1,6 +1,12 @@
 var GCriteriosAvaliacao = [];
 
+
+function initFunctionsCriterios() {
+
+    registerClickIntroduzirRequisicao();
+}
 function initCriteriosAvaliacao(callback) {
+
 
     setTimeout(function () {
         $("#ctl00_conteudo_u_criterio_u_criteriomBox1").hide();
@@ -18,15 +24,15 @@ function initCriteriosAvaliacao(callback) {
     }
 
     // Carregar Select2 CSS se não existir
-   
+
 
     // CSS customizado (layout Mdash)
     if (!$("#criterios-select2-css").length) {
-      /*  $("head").append('<style id="criterios-select2-css">' +
-            '.select2-selection__rendered { overflow-x: scroll !important; }' +
-            '.select2-selection__choice { position: relative !important; padding-right: 25px !important; }' +
-            '.select2-selection__choice__remove { position: absolute !important; right: 4px !important; top: 4px !important; transform: none !important; margin: 0 !important; line-height: 1 !important; }' +
-        '</style>');*/
+        /*  $("head").append('<style id="criterios-select2-css">' +
+              '.select2-selection__rendered { overflow-x: scroll !important; }' +
+              '.select2-selection__choice { position: relative !important; padding-right: 25px !important; }' +
+              '.select2-selection__choice__remove { position: absolute !important; right: 4px !important; top: 4px !important; transform: none !important; margin: 0 !important; line-height: 1 !important; }' +
+          '</style>');*/
     }
 
     var initSelect2 = function () {
@@ -44,7 +50,13 @@ function initCriteriosAvaliacao(callback) {
                         return false;
                     }
 
-                    renderMultiSelect($container, $input, response.data, callback);
+
+                    renderMultiSelect($container, $input, response.data);
+
+                    if (getState() == "consultar") {
+                        $("#criterios-multiselect-container").hide();
+                    }
+                    if (typeof callback === "function") callback();
 
                 } catch (error) {
                     console.log("Erro interno " + errorMessage, error);
@@ -56,13 +68,13 @@ function initCriteriosAvaliacao(callback) {
 
     if (typeof $.fn.select2 === "undefined") {
         initSelect2();
-       
+
     } else {
         initSelect2();
     }
 }
 
-function renderMultiSelect($container, $input, criterios, callback) {
+function renderMultiSelect($container, $input, criterios) {
 
     var valoresActuais = ($input.val() || "").split(",").map(function (v) {
         return v.trim();
@@ -82,7 +94,7 @@ function renderMultiSelect($container, $input, criterios, callback) {
 
     selectHtml += '</select>';
 
-    $container.append(selectHtml);
+    $container.append("<div id='criterios-multiselect-container'>" + selectHtml + "</div>");
 
     $("#criterios-multiselect").select2({
         placeholder: "Seleccione critérios de avaliação",
@@ -109,5 +121,24 @@ function renderMultiSelect($container, $input, criterios, callback) {
         });
     });
 
-    if (typeof callback === "function") callback();
+}
+
+function registerClickIntroduzirRequisicao() {
+
+
+    if ($("#ctl00_conteudo_TipoDossier").val().toString() != "43") {
+        return;
+    }
+
+    $("#BUINTRODUZIR").removeAttr("href");
+
+    $(document).off("click", "#BUINTRODUZIR").on("click", "#BUINTRODUZIR", function (e) {
+        e.preventDefault();
+        if (typeof generateAndOpenModalRequisicao === "function") {
+            generateAndOpenModalRequisicao("#maincontent");
+            return;
+        }
+
+        console.warn("Função global generateAndOpenModalRequisicao não encontrada.");
+    });
 }

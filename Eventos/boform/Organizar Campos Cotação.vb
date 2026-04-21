@@ -85,6 +85,30 @@ Dim bo=CType(mpage, mainform).propmainformdataset.tables(0).rows(0)
 
 Try
 
+
+
+if bo("ndos")=40 Then 
+
+    Dim obj as new Object
+
+    if bo("logi7")=False Then 
+
+        obj=mpage.Master.findcontrol("conteudo").findcontrol("fieldsZone").findcontrol("optionsFields").findcontrol("options3").findcontrol("userOption76")
+        if obj isnot nothing then
+              obj.parent.controls.remove(obj)
+        End If
+
+    End If
+    
+
+    
+    
+
+End If
+
+
+
+
 Dim dossiers As Integer() = {41, 43}
 
 If Array.IndexOf(dossiers, CInt(bo("ndos"))) >= 0 Then 
@@ -102,6 +126,7 @@ End If
 if CInt(bo("ndos"))=43 Then 
 
     'ctl00_conteudo_tpdescFornecedor
+    setReadOnly("u_requis", True)
     ocultarCampo("GridBIContainer")
     ocultarCampo("etotaldeb")
     ocultarCampo("ettiva")

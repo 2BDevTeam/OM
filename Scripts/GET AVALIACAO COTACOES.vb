@@ -25,7 +25,7 @@ Try
 
    ' Query separada: linhas bi com dados dos fornecedores
    Dim queryBi As String = "
-        SELECT bi.bistamp, bi.ref, bi.design, bi.qtt, bi.edebito, bi.no, bi.nome, bi.lordem, bi.u_codlinha
+        SELECT bi.bistamp, bi.ref, bi.design, bi.qtt, bi.edebito, bi.no, bi.nome, bi.lordem, bi.u_codlinha,*
         FROM bi
         JOIN bi2 ON bi2.bi2stamp = bi.bistamp
         WHERE bi.bostamp = @bostamp

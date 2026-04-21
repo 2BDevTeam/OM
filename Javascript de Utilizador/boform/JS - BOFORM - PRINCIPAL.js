@@ -11,6 +11,12 @@ function pageLoad() {
 function init() {
 
     try {
+        initFunctionsCriterios();
+    } catch (error) {
+        console.error("Erro ao inicializar funções de critérios de avaliação:", error);
+    }
+
+    try {
         initCriteriosAvaliacao(function () {
             initGrelhaAvaliacaoCotacoes();
         });

@@ -1,0 +1,188 @@
+[
+    {
+        "instance": "bi",
+        "data": [
+            {
+                "sourceTable": "bi",
+                "sourceKey": "bistamp",
+                "records": [
+                    {
+                        "design": "Pagamentos Diversos",
+                        "qtt": 1,
+                        "ref": "DESP02305",
+                        "bistamp": "",
+                        "lordem": 0,
+                        "u_codlinha": "",
+                        "no": 66,
+                        "nome": "Supermercado Paz",
+                        "edebito": 10000,
+                        "debito": 10000
+                    },
+                    {
+                        "design": "Pagamentos Diversos",
+                        "qtt": 1,
+                        "ref": "DESP02305",
+                        "bistamp": "b42d5007-8526-4529-9b00-e",
+                        "lordem": 0,
+                        "u_codlinha": "",
+                        "no": 12,
+                        "nome": "Associação solidaria",
+                        "edebito": 60000,
+                        "debito": 60000
+                    },
+                    {
+                        "design": "Pagamentos Diversos",
+                        "qtt": 1,
+                        "ref": "DESP02305",
+                        "bistamp": "02360e57-5c17-42e7-9237-a",
+                        "lordem": 0,
+                        "u_codlinha": "",
+                        "no": 3,
+                        "nome": "ADRM",
+                        "edebito": 60000,
+                        "debito": 60000
+                    },
+                    {
+                        "design": "Pagamentos Diversos",
+                        "qtt": 1,
+                        "ref": "DESP02305",
+                        "bistamp": "089b0c75-d6f4-4560-a792-a",
+                        "lordem": 0,
+                        "u_codlinha": "",
+                        "no": 8,
+                        "nome": "AMPDC",
+                        "edebito": 60000,
+                        "debito": 60000
+                    },
+                    {
+                        "design": "Pagamentos Diversos",
+                        "qtt": 1,
+                        "ref": "DESP02305",
+                        "bistamp": "7cf1e7d1-1f01-4f5a-bf61-6",
+                        "lordem": 0,
+                        "u_codlinha": "",
+                        "no": 4,
+                        "nome": "AFS Multi C Service, Lda",
+                        "edebito": 12000,
+                        "debito": 12000
+                    },
+                    {
+                        "design": "Outros Serviços",
+                        "qtt": 5,
+                        "ref": "D6380",
+                        "bistamp": "",
+                        "lordem": 0,
+                        "u_codlinha": "",
+                        "no": 66,
+                        "nome": "Supermercado Paz",
+                        "edebito": 0,
+                        "debito": 0
+                    },
+                    {
+                        "design": "Outros Serviços",
+                        "qtt": 5,
+                        "ref": "D6380",
+                        "bistamp": "85288687-afac-49a3-a1cf-5",
+                        "lordem": 0,
+                        "u_codlinha": "",
+                        "no": 12,
+                        "nome": "Associação solidaria",
+                        "edebito": 0,
+                        "debito": 0
+                    },
+                    {
+                        "design": "Outros Serviços",
+                        "qtt": 5,
+                        "ref": "D6380",
+                        "bistamp": "3f834203-40e3-4d27-a06c-1",
+                        "lordem": 0,
+                        "u_codlinha": "",
+                        "no": 3,
+                        "nome": "ADRM",
+                        "edebito": 0,
+                        "debito": 0
+                    },
+                    {
+                        "design": "Outros Serviços",
+                        "qtt": 5,
+                        "ref": "D6380",
+                        "bistamp": "e1e62f0e-0b77-425c-9c96-3",
+                        "lordem": 0,
+                        "u_codlinha": "",
+                        "no": 8,
+                        "nome": "AMPDC",
+                        "edebito": 0,
+                        "debito": 0
+                    },
+                    {
+                        "design": "Outros Serviços",
+                        "qtt": 5,
+                        "ref": "D6380",
+                        "bistamp": "592cad5b-4652-4ef2-80f3-7",
+                        "lordem": 0,
+                        "u_codlinha": "",
+                        "no": 4,
+                        "nome": "AFS Multi C Service, Lda",
+                        "edebito": 113400,
+                        "debito": 567000
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "instance": "bi2",
+        "data": [
+            {
+                "sourceTable": "bi2",
+                "sourceKey": "bi2stamp",
+                "records": [
+                    {
+                        "bi2stamp": "",
+                        "bostamp": "08436e8c3108c610a10926"
+                    },
+                    {
+                        "bi2stamp": "b42d5007-8526-4529-9b00-e",
+                        "bostamp": "08436e8c3108c610a10926"
+                    },
+                    {
+                        "bi2stamp": "02360e57-5c17-42e7-9237-a",
+                        "bostamp": "08436e8c3108c610a10926"
+                    },
+                    {
+                        "bi2stamp": "089b0c75-d6f4-4560-a792-a",
+                        "bostamp": "08436e8c3108c610a10926"
+                    },
+                    {
+                        "bi2stamp": "7cf1e7d1-1f01-4f5a-bf61-6",
+                        "bostamp": "08436e8c3108c610a10926"
+                    },
+                    {
+                        "bi2stamp": "",
+                        "bostamp": "08436e8c3108c610a10926"
+                    },
+                    {
+                        "bi2stamp": "85288687-afac-49a3-a1cf-5",
+                        "bostamp": "08436e8c3108c610a10926"
+                    },
+                    {
+                        "bi2stamp": "3f834203-40e3-4d27-a06c-1",
+                        "bostamp": "08436e8c3108c610a10926"
+                    },
+                    {
+                        "bi2stamp": "e1e62f0e-0b77-425c-9c96-3",
+                        "bostamp": "08436e8c3108c610a10926"
+                    },
+                    {
+                        "bi2stamp": "592cad5b-4652-4ef2-80f3-7",
+                        "bostamp": "08436e8c3108c610a10926"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "instance": "u_avcrit",
+        "data": []
+    }
+]
